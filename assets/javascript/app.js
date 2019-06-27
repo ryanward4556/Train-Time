@@ -21,12 +21,12 @@ $("#submit-button").on("click", function (e) {
     var time = $("#first-time-input").val();
     var frequency = $("#frequency-input").val();
 
-    var train = database.ref().set({
+    var train = {
         name,
         destination,
         time,
         frequency
-    })
+    };
     database.ref().push(train);
 
 
